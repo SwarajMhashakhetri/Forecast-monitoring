@@ -144,11 +144,16 @@ export default function ForecastChart({ actuals, forecasts, loading, error }: Pr
                     hour: "2-digit", minute: "2-digit",
                   });
                 }}
-                formatter={(value: unknown, name: string) =>
-                  typeof value === "number"
-                    ? [`${value.toLocaleString(undefined, { maximumFractionDigits: 0 })} MW`, name]
-                    : ["", name]
-                }
+                 formatter={(
+                   value: any,
+                   name?: any,
+                   ...rest: any[]
+                 ) => {
+                   if (typeof value === "number") {
+                     return [`${value.toLocaleString(undefined, { maximumFractionDigits: 0 })} MW`, name ?? ""];
+                   }
+                   return ["", name ?? ""];
+                 }}
               />
 
               <Legend
