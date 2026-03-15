@@ -101,7 +101,7 @@ You can:
 - **Recommended:** [Vercel](https://vercel.com/) for zero-config Next.js deployment.
 - Or use Heroku/Netlify, ensure Node 18+ and public internet access.
 - Add resulting deploy URL here:
-  - PROD: `<your-app-url>`
+  - PROD: `https://forecast-monitoring-smoky.vercel.app/`
 
 ---
 
